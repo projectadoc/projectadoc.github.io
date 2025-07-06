@@ -1,10 +1,306 @@
-<!DOCTYPE html>
-<html>
-        <head>
-                <title>Projectadoc - Collaboration made easy</title>
-        </head>
-        <body>
-                <img style="height:96vh" src="projectadoc.svg">
-                <footer style="font-family:arial;text-align: center;"><span style="font-weight:bold">Projectadoc |</span>  ABN: 41396429685</footer>
-        </body>
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <title>Projectadoc - bespoke project management solutions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Projectadoc specialize in project management of bespoke construction to exacting standards serving Northern Sydney">"
+  <link rel="manifest" href="manifest.json" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    html {
+        font-size: 62.5%;
+        font-family: 'Roboto', sans-serif;
+    }
+    li {
+        list-style: none;
+    }
+    a {
+        text-decoration: none;
+    }
+    header {
+      border-bottom: 1px solid #E2E8F0;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 1.5rem;
+    }
+    .hamburger {
+      display: none;
+    }
+    .bar {
+      display: block;
+      width: 25px;
+      height: 3px;
+      margin: 5px auto;
+      -webkit-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
+      background-color: #101010;
+    }
+    .nav-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .nav-item {
+      margin-left: 5rem;
+    }
+    .nav-link{
+      cursor: pointer;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #475569;
+      user-select: none;
+    }
+    .nav-link:hover{
+      color: #482ff7;
+    }
+    @media only screen and (max-width: 1100px) {
+      .nav-menu {
+          position: fixed;
+          left: -100%;
+          top: 5rem;
+          flex-direction: column;
+          background-color: #fff;
+          width: 100%;
+          border-radius: 10px;
+          text-align: center;
+          transition: 0.3s;
+          box-shadow:
+              0 10px 27px rgba(0, 0, 0, 0.05);
+      }
+      .nav-menu.active {
+          left: 0;
+      }
+      .nav-item {
+          margin: 2.5rem 0;
+      }
+      .hamburger {
+          display: block;
+          cursor: pointer;
+      }
+      .hamburger.active .bar:nth-child(2) {
+          opacity: 0;
+      }
+      .hamburger.active .bar:nth-child(1) {
+          transform: translateY(8px) rotate(45deg);
+      }
+      .hamburger.active .bar:nth-child(3) {
+          transform: translateY(-8px) rotate(-45deg);
+      }
+    }
+    .hero {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      max-height: 40vh;
+      overflow: hidden;
+    }
+    .pageimage {
+      align-items: center;
+      align-self: center;
+      display: flex;
+      overflow: hidden;
+    }
+    .tagline {
+      font-size: large;
+      color: #555;
+      padding-left: 20px;
+    }
+    .rooms {
+      align-items: center;
+      background-image: url(images/marble.jpg);
+      display: flex;
+      max-height: 30vh;
+      overflow: hidden;
+      margin: 20px;
+    }
+    .footer {
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+    .nav-logo {
+      align-items: center;
+      display: flex;
+      justify-content: center;
+    }
+    .text {
+      font-size: 18pt;
+      min-width: 50%;
+      text-align: center;
+    }
+    .bodytext {
+      font-size: 150%;
+      max-width: 75%;
+      padding-left: 25%;
+      padding-top: 30px;
+      text-align: center;
+    }
+    .fade-in {
+      animation: fadeIn ease 1s;
+    }
+    @keyframes fadeIn {
+      0% {
+        opacity:0;
+      }
+      100% {
+        opacity:1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <div class="nav-logo">
+        <img width="128px" height="128px" alt="Projectadoc logo" src="projectadoc.svg">
+        <span class="tagline">BUILDING | PROJECT | MANAGEMENT</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <span id="home" class="nav-link">Home</span>
+        </li>
+        <li class="nav-item">
+          <span id="about" class="nav-link">About</span>
+        </li>
+        <li class="nav-item">
+          <span id="projects" class="nav-link">Projects</span>
+        </li>
+        <li class="nav-item">
+          <span id="testimonials" class="nav-link">Testimonials</span>
+        </li>
+        <li class="nav-item">
+          <span id="contact" class="nav-link">Contact</span>
+        </li>
+      </ul>
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+    </nav>
+  </header>
+  <div class="home">
+    <div class="hero fade-in">
+      <img alt="Kitchen with water view" src="images/kitchen.jpg" width="100%">
+    </div>
+    <div class="bodytext">
+      <h1>Exceptional Quality Building Projects</h1>
+      <p style="padding-top: 20px">
+        Whether it's renovation, extension or a brand new build,
+        the main thing to make sure of is perfection and attention 
+        to detail when choosing a project manager. At Projectadoc we pride
+        ourselves on delivering exceptional results every time without
+        cutting corners. <span id="homecontact" class="nav-link">Contact us</span> for all your project needs and
+        we'll make sure to deliver something truly special.
+      </p>
+    </div>
+    <div class="rooms">
+      <div class="text">
+        <p>
+          Houses
+        </p>
+      </div>
+      <div>
+        <img alt="Modern house build" class="pageimage fade-in" loading=lazy src="images/house.jpg" width="100%">
+      </div>
+    </div>
+    <div class="rooms">
+      <div>
+        <img alt="Outdoor living area" class="pageimage fade-in" loading=lazy src="images/deck.jpg" width="100%">
+      </div>
+      <div class="text">
+        <p>
+          Outdoor living
+        </p>
+      </div>
+    </div>
+    <div class="rooms">
+      <div class="text">
+        <p>
+          Landscaping
+        </p>
+      </div>
+      <div>
+        <img alt="Landscaped garden area" class="pageimage fade-in" loading=lazy src="images/garden.jpg" width="100%">
+      </div>
+    </div>
+    <div class="rooms">
+      <div>
+        <img alt="Modern bathroom" class="pageimage fade-in" loading=lazy src="images/bathroom.jpg" width="100%">
+      </div>
+      <div class="text">
+        <p>
+          Bathrooms
+        </p>
+      </div>
+    </div>
+    <div class="rooms">
+      <div class="text">
+        <p>
+          Bespoke design
+        </p>
+      </div>
+      <div>
+        <img alt="Concrete and timber spiral stairs" class="pageimage fade-in" loading=lazy src="images/staircase.jpg" width="100%">
+      </div>
+    </div>
+    <div class="rooms">
+      <div>
+        <img alt="Recycled timber door" class="pageimage fade-in" loading=lazy src="images/recycled.jpg" width="100%">
+      </div>
+      <div class="text">
+        <p>
+          Recycled features
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="about" hidden>
+    <div class="bodytext">
+      <h1>About Projectadoc</h1>
+    </div>
+  </div>
+  <div class="projects" hidden>
+    <div class="bodytext">
+      <h1>Projects</h1>
+    </div>
+  </div>
+  <div class="testimonials" hidden>
+    <div class="bodytext">
+      <h1>Testimonials</h1>
+    </div>
+  </div>
+  <div class="contact" hidden>
+    <div class="bodytext">
+      <h1>Contact Us</h1>
+      <br/>
+      <p>PHONE:</p>
+      <p>Call us on <a href="tel:0478487732">0478 487-732</a></p>
+      <br/>
+      <p>EMAIL:</p>
+      <p><a href="mailto:alex@projectadoc.com?Subject=Web Enquiry">alex@projectadoc.com</a></p>
+    </div>>
+  </div>
+  <div class="footer">
+    <div>
+      <span id="contact2" class="nav-link">Contact</span>
+    </div>
+  </div>
+  <hr>
+  <div class="footer">
+    <p>Copyright 2025 - Projectadoc. ABN: 41396429685</p>
+  </div>
+  <script src="projectadoc.js"></script>
+</body>
 </html>
